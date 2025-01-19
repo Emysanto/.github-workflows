@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Generate Snake Contribution Graph
-        uses: platane/snk@v2
+        uses: platane/snk@v1
         with:
           github_user_name: Emysanto
           svg: true
