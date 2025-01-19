@@ -21,7 +21,7 @@ jobs:
 
       - name: Move Snake Contribution Graph to assets folder
         run: |
-          mkdir -p assets
+          mkdir -p action's documentation for any updates or changes.
           mv snake.svg assets/snake.svg
 
       - name: Commit and push Snake Contribution Graph
@@ -29,3 +29,8 @@ jobs:
         with:
           add: 'assets/snake.svg'
           message: 'Update Snake contribution graph'
+
+
+          
+    
+
