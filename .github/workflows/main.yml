@@ -15,7 +15,7 @@ jobs:
       - name: Generate Snake Contribution Graph
         uses: platane/snk@v2
         with:
-          github_user_name: your-github-username
+          github_user_name: Emysanto
           svg: true
           scale: 3
 
