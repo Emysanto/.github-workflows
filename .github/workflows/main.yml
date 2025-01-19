@@ -3,7 +3,7 @@ name: Generate Snake Contribution Graph
 on:
   schedule:
     - cron: '0 0 * * *' # Runs daily at midnight
-  workflow_dispatch:
+  workflow_dispatch: # Allows manual triggering of the workflow
 
 jobs:
   update-snake:
@@ -15,13 +15,17 @@ jobs:
       - name: Generate Snake Contribution Graph
         uses: platane/snk@v2
         with:
-          github_user_name: Emysanto
-          # Optional settings
+          github_user_name: your-github-username
           svg: true
           scale: 3
+
+      - name: Move Snake Contribution Graph to assets folder
+        run: |
+          mkdir -p assets
+          mv snake.svg assets/snake.svg
 
       - name: Commit and push Snake Contribution Graph
         uses: EndBug/add-and-commit@v9
         with:
-          add: 'snake.svg'
+          add: 'assets/snake.svg'
           message: 'Update Snake contribution graph'
